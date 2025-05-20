@@ -1,5 +1,6 @@
 package com.nova.galaxy.controller;
 
+import com.nova.galaxy.dto.ResponseUserInfoDTO;
 import com.nova.galaxy.entity.UserInfo;
 import com.nova.galaxy.service.UserInfoService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +19,7 @@ public class UserInfoController {
     }
 
     @PostMapping("/save")
-    public UserInfo saveUser(@RequestBody UserInfo userInfo) {
+    public ResponseUserInfoDTO saveUser(@RequestBody UserInfo userInfo) {
         return userInfoService.saveUser(userInfo);
     }
 }
