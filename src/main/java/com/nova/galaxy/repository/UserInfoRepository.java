@@ -10,4 +10,6 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, Long> {
     public UserInfo findByEmail(String email);
 
     boolean existsByFirstNameAndLastName(String firstName, String lastName);
+
+    UserInfo findByUserName(String userName);
 }
